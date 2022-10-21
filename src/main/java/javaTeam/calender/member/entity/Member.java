@@ -8,8 +8,9 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Entity(name="member_table") // 테이블 명
-public class MemberEntity {
+@Entity
+@Table(name="member_table")
+public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,4 +27,5 @@ public class MemberEntity {
 
     @Column(nullable = false, unique = true,length = 30)
     private String memberName;
+
 }
