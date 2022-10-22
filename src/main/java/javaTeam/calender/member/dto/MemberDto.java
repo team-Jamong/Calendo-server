@@ -1,4 +1,4 @@
-package javaTeam.calender.member.Dto;
+package javaTeam.calender.member.dto;
 
 import javaTeam.calender.member.entity.Member;
 import lombok.Getter;
