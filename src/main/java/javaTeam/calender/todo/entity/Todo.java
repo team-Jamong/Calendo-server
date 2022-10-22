@@ -1,5 +1,6 @@
 package javaTeam.calender.todo.entity;
 
+import javaTeam.calender.todo.dto.TodoDto;
 import lombok.*;
 
 import javax.persistence.*;
@@ -23,5 +24,9 @@ public class Todo {
 
     @Column(name = "RegisterDate" , nullable = false)
     private Date registerDate;
+
+    public Todo(TodoDto dto) {
+
+    }
 
 }
