@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -27,5 +28,12 @@ public class TodoServiceImpl implements TodoService{
 
         Todo todo = todoUtil.todoWriteUtil(todoSeqParm, whatTodoParm, registerDateParm);
         todoRepository.save(todo);
+    }
+
+    @Override
+    public List<Todo> findAllTodoList() {
+        List<Todo> todos = todoRepository.findAll();
+
+        return todos;
     }
 }
