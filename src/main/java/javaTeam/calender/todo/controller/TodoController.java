@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
@@ -15,6 +16,11 @@ import java.util.Date;
 public class TodoController {
 
     TodoService todoService = new TodoServiceImpl();
+
+    @RequestMapping("/")
+    public String main() {
+        return "index";
+    }
 
     @GetMapping("/todo")
     public String todo(Model model) {
