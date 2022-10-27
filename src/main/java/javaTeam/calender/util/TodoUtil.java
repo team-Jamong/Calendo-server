@@ -1,10 +1,8 @@
-package javaTeam.calender.todo.util;
+package javaTeam.calender.util;
 
-import javaTeam.calender.todo.entity.Todo;
-import javaTeam.calender.todo.repository.TodoRepository;
+import javaTeam.calender.entity.Todo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;

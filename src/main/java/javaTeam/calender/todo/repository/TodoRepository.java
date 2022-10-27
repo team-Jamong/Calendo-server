@@ -1,6 +1,6 @@
 package javaTeam.calender.todo.repository;
 
-import javaTeam.calender.todo.entity.Todo;
+import javaTeam.calender.entity.Todo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package javaTeam.calender.member.dto;
 
-import javaTeam.calender.member.entity.Member;
+import javaTeam.calender.entity.Member;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,7 +1,5 @@
 package javaTeam.calender.todo.dto;
 
-import javaTeam.calender.todo.entity.Todo;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 

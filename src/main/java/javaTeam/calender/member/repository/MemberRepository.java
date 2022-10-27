@@ -1,6 +1,6 @@
 package javaTeam.calender.member.repository;
 
-import javaTeam.calender.member.entity.Member;
+import javaTeam.calender.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
