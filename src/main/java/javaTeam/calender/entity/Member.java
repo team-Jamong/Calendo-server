@@ -1,4 +1,4 @@
-package javaTeam.calender.member.entity;
+package javaTeam.calender.entity;
 
 import lombok.*;
 

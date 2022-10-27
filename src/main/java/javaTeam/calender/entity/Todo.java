@@ -1,4 +1,4 @@
-package javaTeam.calender.todo.entity;
+package javaTeam.calender.entity;
 
 import javaTeam.calender.todo.dto.TodoDto;
 import lombok.*;
