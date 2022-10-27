@@ -3,9 +3,11 @@ package javaTeam.calender.member.dto;
 import javaTeam.calender.entity.Member;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class MemberDto {
     private Integer seq;
     private String memberId;
