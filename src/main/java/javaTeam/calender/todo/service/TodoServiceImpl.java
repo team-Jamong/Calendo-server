@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -22,11 +21,7 @@ public class TodoServiceImpl implements TodoService{
 
     @Override
     public void write(TodoDto todoDto) {
-        Integer todoSeqParm = todoDto.getTodoSeq();
-        String whatTodoParm = todoDto.getWhatToDo();
-        Date registerDateParm = todoDto.getRegisterDate();
-
-        Todo todo = todoUtil.todoWriteUtil(todoSeqParm, whatTodoParm, registerDateParm);
+        Todo todo = todoUtil.todoWriteUtil(todoDto.getTodoSeq(), todoDto.getWhatToDo(), todoDto.getRegisterDate());
         todoRepository.save(todo);
     }
 
