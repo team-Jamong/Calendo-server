@@ -1,8 +1,8 @@
-package javaTeam.calender.todo.service;
+package Jamong.calender.todo.service;
 
-import javaTeam.calender.todo.dto.TodoDto;
-import javaTeam.calender.todo.entity.Todo;
-import javaTeam.calender.todo.repository.TodoRepository;
+import Jamong.calender.todo.dto.TodoDto;
+import Jamong.calender.todo.entity.Todo;
+import Jamong.calender.todo.repository.TodoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
