@@ -13,4 +13,10 @@ public class MemberDto {
     private String password;
     private String name;
 
+    MemberDto(String login_id , String password , String name) {
+        this.login_id = login_id;
+        this.password = password;
+        this.name = name;
+    }
+
 }
