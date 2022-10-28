@@ -1,4 +1,4 @@
-package javaTeam.calender;
+package Jamong.calender;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
