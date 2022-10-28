@@ -1,7 +1,7 @@
 package javaTeam.calender.todo.service;
 
 import javaTeam.calender.todo.dto.TodoDto;
-import javaTeam.calender.entity.Todo;
+import javaTeam.calender.todo.entity.Todo;
 import javaTeam.calender.todo.repository.TodoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
