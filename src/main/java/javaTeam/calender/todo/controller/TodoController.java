@@ -15,32 +15,4 @@ import java.util.Date;
 @Controller
 public class TodoController {
 
-    TodoService todoService = new TodoServiceImpl();
-
-    @RequestMapping("/")
-    public String main() {
-        return "index";
-    }
-
-    @GetMapping("/todo")
-    public String todo(Model model) {
-
-        return "todolist";
-    }
-
-    @GetMapping("/todo/write")
-    public String writeTodoTemplate() {
-        return "write-todo";
-    }
-
-    @PostMapping("/todo/write")
-    public String writeTodo(
-            @RequestParam String whatToDo,
-            @RequestParam Date registerDate){
-
-        TodoDto todoDto = new TodoDto(whatToDo, registerDate);
-        todoService.write(todoDto);
-
-        return "todolist";
-    }
 }
