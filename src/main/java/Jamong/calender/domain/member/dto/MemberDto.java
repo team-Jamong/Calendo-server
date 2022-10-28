@@ -12,4 +12,5 @@ public class MemberDto {
     private String login_id;
     private String password;
     private String name;
+
 }
