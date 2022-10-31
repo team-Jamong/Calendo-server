@@ -16,8 +16,13 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer member_idx;
 
+    @Column(name = "login_id")
     private String login_id;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "name")
     private String name;
 
 }
