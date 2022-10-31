@@ -14,4 +14,8 @@ public class PlannerDto {
     private String content;
     private Member member;
 
+    public PlannerDto(String content) {
+        this.content = content;
+    }
+
 }
