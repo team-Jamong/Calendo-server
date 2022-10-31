@@ -1,6 +1,6 @@
 package Jamong.calender.domain.planner.dto;
 
-import Jamong.calender.domain.member.dto.MemberDto;
+import Jamong.calender.domain.member.entity.Member;
 import lombok.*;
 
 
@@ -12,9 +12,6 @@ public class PlannerDto {
 
     private Integer planner_idx;
     private String content;
-    private MemberDto memberDto;
+    private Member member;
 
-    public PlannerDto(String content) {
-        this.content = content;
-    }
 }

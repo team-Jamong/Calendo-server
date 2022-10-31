@@ -16,7 +16,7 @@ public class Planner {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "planner_idx", nullable = false)
-    private Long planner_idx;
+    private Integer planner_idx;
 
     @Column(name = "content")
     private String content;
