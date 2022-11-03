@@ -1,5 +1,6 @@
 package Jamong.calender.domain.member.dto;
 
+import Jamong.calender.domain.member.entity.Member;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,6 +18,14 @@ public class MemberDto {
         this.login_id = login_id;
         this.password = password;
         this.name = name;
+    }
+
+    public Member toEntity() {
+        return Member.builder().
+                login_id(login_id)
+                .password(password)
+                .name(name)
+                .build();
     }
 
 }

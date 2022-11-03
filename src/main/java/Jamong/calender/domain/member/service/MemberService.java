@@ -12,7 +12,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    public Integer saveMember(MemberDto memberDto) {
+    public void saveMember(MemberDto memberDto) {
         Member member = Member.builder()
                 .login_id(memberDto.getLogin_id())
                 .password(memberDto.getPassword())
@@ -20,7 +20,5 @@ public class MemberService {
                 .build();
 
         memberRepository.save(member);
-
-        return member.getMember_idx();
     }
 }

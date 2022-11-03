@@ -14,17 +14,5 @@ public class PlannerService {
 
     private final PlannerRepository plannerRepository;
 
-    public Integer writePlanner(PlannerDto plannerDto) {
-        Planner planner = Planner.builder()
-                .content(plannerDto.getContent())
-                .member(plannerDto.getMember())
-                .build();
 
-        return planner.getPlanner_idx();
-    }
-
-    public List<Planner> findAllPlanner() {
-        List<Planner> planners = plannerRepository.findAll();
-        return planners;
-    }
 }
