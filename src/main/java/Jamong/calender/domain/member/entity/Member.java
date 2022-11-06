@@ -14,10 +14,7 @@ public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer member_idx;
-
-    @Column(name = "login_id")
-    private String login_id;
+    private String uuid;
 
     @Column(name = "password")
     private String password;
