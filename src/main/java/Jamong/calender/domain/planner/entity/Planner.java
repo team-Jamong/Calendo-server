@@ -6,9 +6,8 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter
+@Getter @Builder
 @Table(name = "planner")
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Planner {
@@ -18,10 +17,13 @@ public class Planner {
     @Column(name = "planner_idx", nullable = false)
     private Integer planner_idx;
 
+    @Column(name = "title")
+    private String title;
+
     @Column(name = "content")
     private String content;
 
     @ManyToOne
-    @JoinColumn(name = "member_idx")
-    private Member member;
+    @JoinColumn(name = "uuid")
+    private Member uuid;
 }
