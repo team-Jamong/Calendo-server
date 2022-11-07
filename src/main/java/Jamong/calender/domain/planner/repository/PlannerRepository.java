@@ -9,4 +9,5 @@ import java.util.Optional;
 @Repository
 public interface PlannerRepository extends JpaRepository<Planner, Integer> {
     Optional<Planner> findByTitle(String title);
+    void deleteByTitle(String title);
 }
