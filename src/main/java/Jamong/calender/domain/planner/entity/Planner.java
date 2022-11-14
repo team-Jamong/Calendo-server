@@ -15,7 +15,7 @@ public class Planner {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "planner_idx", nullable = false)
-    private Integer planner_idx;
+    private Integer plannerId;
 
     @Column(name = "title")
     private String title;
@@ -23,7 +23,7 @@ public class Planner {
     @Column(name = "content")
     private String content;
 
-    @ManyToOne
-    @JoinColumn(name = "uuid")
-    private Member uuid;
+    @OneToOne
+    @JoinColumn(name = "member_idx")
+    private Member memberId;
 }

@@ -7,21 +7,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.validation.constraints.NotEmpty;
+
 
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class PlannerRequest {
+
+    @NotEmpty(message = "플래너 내용은 공백이여선 안됩니다.")
     private String content;
 
+    @NotEmpty(message = "플래너 제목은 공백이여선 안됩니다.")
     private String title;
-    private Member uuid;
+
+    private Member memberId;
 
     public Planner toEntity() {
         return Planner.builder()
                 .content(content)
-                .uuid(uuid)
                 .title(title)
+                .memberId(memberId)
                 .build();
     }
 }

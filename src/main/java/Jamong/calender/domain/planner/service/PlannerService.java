@@ -31,8 +31,12 @@ public class PlannerService {
     }
 
     // 플래너 삭제
-    public void deletePlannerByTitle(String title) {
+    public PlannerResponse deletePlannerByTitle(String title) {
+        Optional<Planner> findPlanner = plannerRepository.findByTitle(title);
+        PlannerResponse response = new PlannerResponse(findPlanner.get().getTitle()
+                , findPlanner.get().getContent());
         plannerRepository.deleteByTitle(title);
+        return response;
     }
 
 }
