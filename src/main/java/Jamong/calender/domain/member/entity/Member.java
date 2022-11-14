@@ -4,7 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Entity(name = "Member")
+@Entity
 @Table(name = "member")
 @Getter @Setter
 @NoArgsConstructor
@@ -14,7 +14,11 @@ public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String uuid;
+    @Column(name = "member_idx")
+    private Integer memberId;
+
+    @Column(name = "login_id")
+    private String loginId;
 
     @Column(name = "password")
     private String password;
