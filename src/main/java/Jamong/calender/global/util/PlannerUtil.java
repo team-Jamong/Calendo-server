@@ -2,17 +2,12 @@ package Jamong.calender.global.util;
 
 import Jamong.calender.domain.planner.dto.response.PlannerResponse;
 import Jamong.calender.domain.planner.entity.Planner;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
+@Component
 public class PlannerUtil {
 
-    public PlannerResponse makePlannerResponse(Planner planner) {
-        return new PlannerResponse(planner.getTitle(), planner.getContent());
-    }
-
-    public PlannerResponse makePlannerResponse(Optional<Planner> planner) {
-        return new PlannerResponse(planner.get().getTitle(), planner.get().getContent());
-    }
 
 }

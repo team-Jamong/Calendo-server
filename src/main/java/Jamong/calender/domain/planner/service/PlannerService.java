@@ -20,14 +20,19 @@ public class PlannerService {
     // 플래너 등록하기
     public PlannerResponse writePlanner(PlannerRequest request) {
         Planner savePlanner = plannerRepository.save(request.toEntity());
-
-        return plannerUtil.makePlannerResponse(savePlanner);
+        return PlannerResponse.builder()
+                .title(request.getTitle())
+                .content(request.getContent())
+                .build();
     }
 
     // 플래너 제목으로 불러오기
     public PlannerResponse readPlannerByTitle(String title) {
         Optional<Planner> findPlanner = plannerRepository.findByTitle(title);
-        return plannerUtil.makePlannerResponse(findPlanner);
+        return PlannerResponse.builder()
+                .title(findPlanner.get().getTitle())
+                .content(findPlanner.get().getContent())
+                .build();
     }
 
     // 플래너 삭제

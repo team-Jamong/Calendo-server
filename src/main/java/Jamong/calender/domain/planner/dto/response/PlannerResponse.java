@@ -1,12 +1,9 @@
 package Jamong.calender.domain.planner.dto.response;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-@Getter @Setter
+@Getter @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class PlannerResponse {
