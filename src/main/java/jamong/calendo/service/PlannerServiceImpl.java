@@ -2,7 +2,6 @@ package jamong.calendo.service;
 
 import jamong.calendo.dto.request.TodoRequest;
 import jamong.calendo.dto.request.WriteRequest;
-import jamong.calendo.dto.response.WriteResponse;
 import jamong.calendo.entity.Planner;
 import jamong.calendo.exception.collection.BadRequestException;
 import jamong.calendo.repository.PlannerRepository;
@@ -19,10 +18,10 @@ public class PlannerServiceImpl implements PlannerService{
     private final PlannerRepository plannerRepository;
 
     @Override
-    public Planner writePlanner(WriteRequest writeRequest) {
+    public Planner writePlanner(TodoRequest request) {
         Planner savePlanner = plannerRepository.save(Planner.builder()
-                .title(writeRequest.getTitle())
-                .content(writeRequest.getContent())
+                .title(request.getTitle())
+                .content(request.getContent())
                 .build());
         return savePlanner;
     }
@@ -60,6 +59,4 @@ public class PlannerServiceImpl implements PlannerService{
     public void deleteAll() {
         plannerRepository.deleteAll();
     }
-
-
 }
