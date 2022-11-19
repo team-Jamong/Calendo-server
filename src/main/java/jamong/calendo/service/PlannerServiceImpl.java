@@ -25,5 +25,10 @@ public class PlannerServiceImpl implements PlannerService{
                 .build();
     }
 
+    @Override
+    public WriteResponse read(String title) {
+        return null;
+    }
+
 
 }

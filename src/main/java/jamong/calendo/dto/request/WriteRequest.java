@@ -1,6 +1,5 @@
 package jamong.calendo.dto.request;
 
-import jamong.calendo.entity.Planner;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
