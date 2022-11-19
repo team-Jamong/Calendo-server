@@ -19,7 +19,7 @@ public class PlannerController {
 
     @PostMapping("/write")
     public WriteResponse write(@Validated @RequestBody WriteRequest request) {
-        WriteResponse writeResponse = plannerService.writePlanner(request);
-        return writeResponse;
+
+        return null;
     }
 }
