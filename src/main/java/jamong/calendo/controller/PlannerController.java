@@ -48,21 +48,18 @@ public class PlannerController {
 
     @PatchMapping("{id}")
     public ResponseEntity<Planner> update(@PathVariable Long id, @RequestBody TodoRequest request) {
-        System.out.println("UPDATE");
         Planner result = plannerService.updatePlanner(id, request);
         return ResponseEntity.ok(result);
     }
 
     @DeleteMapping("{id}")
     public ResponseEntity<?> deleteOne(@PathVariable Long id) {
-        System.out.println("DELETE ONE");
         plannerService.deleteById(id);
         return  ResponseEntity.ok().build();
     }
 
     @DeleteMapping
     public ResponseEntity<?> deleteAll() {
-        System.out.println("DELETE ALL");
         plannerService.deleteAll();
         return ResponseEntity.ok().build();
     }
