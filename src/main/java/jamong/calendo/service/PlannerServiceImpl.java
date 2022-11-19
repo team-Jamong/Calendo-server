@@ -1,7 +1,6 @@
 package jamong.calendo.service;
 
 import jamong.calendo.dto.request.TodoRequest;
-import jamong.calendo.dto.request.WriteRequest;
 import jamong.calendo.entity.Planner;
 import jamong.calendo.exception.collection.BadRequestException;
 import jamong.calendo.repository.PlannerRepository;
