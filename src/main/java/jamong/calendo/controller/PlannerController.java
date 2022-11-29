@@ -26,7 +26,9 @@ public class PlannerController {
             return ResponseEntity.badRequest().build();
 
         if(ObjectUtils.isEmpty(request.getContent()))
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest(
+
+            ).build();
 
         Planner result = this.plannerService.writePlanner(request);
         return ResponseEntity.ok(new TodoResponse(result));
@@ -55,7 +57,7 @@ public class PlannerController {
     @DeleteMapping("{id}")
     public ResponseEntity<?> deleteOne(@PathVariable Long id) {
         plannerService.deleteById(id);
-        return  ResponseEntity.ok().build();
+        return ResponseEntity.ok().build();
     }
 
     @DeleteMapping
